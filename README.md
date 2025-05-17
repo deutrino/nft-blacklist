@@ -30,7 +30,7 @@ A Bash shell script which uses nftables sets to ban a large number of IP address
 
 ## First run, create the list
 
-to generate the `/etc/nft-blacklist/ip-blacklist.restore`:
+to generate the files in `/var/cache/nft-blacklist`:
 
 ```sh
 /usr/local/sbin/nft-blacklist.sh /etc/nft-blacklist/nft-blacklist.conf
@@ -52,7 +52,7 @@ In order to auto-update the blacklist, copy the following code into `/etc/cron.d
 ```sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 MAILTO=root
-33 23 * * *      root /usr/local/sbin/nft-blacklist.sh /var/cache/nft-blacklist/nft-blacklist.conf
+33 23 * * *      root /usr/local/sbin/nft-blacklist.sh /etc/nft-blacklist/nft-blacklist.conf
 ```
 
 ## Check for dropped packets
