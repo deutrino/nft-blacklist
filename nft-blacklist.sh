@@ -56,7 +56,7 @@ fi
 [[ ${DRY_RUN:-no} =~ ^1|on|true|yes$ ]] && let DRY_RUN=1 || let DRY_RUN=0
 [[ ${DO_OPTIMIZE_CIDR:-yes} =~ ^1|on|true|yes$ ]] && let OPTIMIZE_CIDR=1 || let OPTIMIZE_CIDR=0
 [[ ${KEEP_TMP_FILES:-no} =~ ^1|on|true|yes$ ]] && let KEEP_TMP_FILES=1 || let KEEP_TMP_FILES=0
-CIDR_MERGER="${CIDR_MERGER:-DEFAULT_CIDR_MERGER}"
+CIDR_MERGER="${CIDR_MERGER:-$DEFAULT_CIDR_MERGER}"
 HOOK="${HOOK:-$DEFAULT_HOOK}"
 CHAIN="${CHAIN:-$DEFAULT_CHAIN}"
 
